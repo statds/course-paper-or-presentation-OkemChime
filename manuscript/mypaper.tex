@@ -525,6 +525,25 @@ results for each of the 9 players players using this model.
 \section{Results}
 \label{sec:resu}
 
+% table comparing model performance
+\begin{table}[h]
+  \centering
+  \begin{tabular}{|l|c|c|c|}
+  \hline
+  \textbf{Model} & \textbf{Average MSE} & \textbf{Average MAE} & \textbf{Average Correlation} \\
+  \hline
+  Decision Tree & 0.045 & 0.157 & -0.001 \\
+  Gradient Boost & 0.041 & 0.150 & -0.110 \\
+  Kernel Ridge & 0.168 & 0.331 & 0.163 \\
+  Linear Regression & 2.927 & 0.597 & -0.252 \\
+  Random Forest & 0.042 & 0.153 & -0.324 \\
+  Ridge Regression & 0.080 & 0.214 & -0.316 \\
+  \hline
+  \end{tabular}
+  \caption{Model Performance Metrics}
+  \label{tab:model_performance}
+  \end{table}
+
 
 \section{Discussion}
 \label{sec:disc}
@@ -542,7 +561,7 @@ results for each of the 9 players players using this model.
 
 
 
-\bibliography{refs}
+\bibliography{myrefs}
 \bibliographystyle{plainnat} 
 
 
