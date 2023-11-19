@@ -526,6 +526,8 @@ results for each of the 9 players players using this model.
 \label{sec:resu}
 
 % table comparing model performance
+
+
 \begin{table}[h]
   \centering
   \begin{tabular}{|l|c|c|c|}
@@ -543,6 +545,40 @@ results for each of the 9 players players using this model.
   \caption{Model Performance Comparison}
   \label{tab:model_performance}
   \end{table}
+
+
+  % zaha figure
+
+  \begin{figure}[h]
+    \centering
+    \includegraphics[width=0.8\textwidth]{GradBoost_Zaha.pdf}
+    \caption{Wilfried Zaha Predictions vs Actual (Gradient Boost)}
+    \label{fig:zaha_graph}
+    \end{figure}
+    
+
+
+
+%zaha acc vs pred
+
+\begin{table}[h]
+  \centering
+  \begin{tabular}{|l|c|c|c|c|}
+  \hline
+  \textbf{Player Name} & \textbf{Season} & \textbf{Actual G+A/90} & \textbf{Predicted G+A/90} & \textbf{Discrepancy} \\
+  \hline
+  Wilfried Zaha & 2017-18 & 0.420 & 0.450 & 0.030 \\
+  Wilfried Zaha & 2018-19 & 0.440 & 0.435 & 0.005 \\
+  Wilfried Zaha & 2019-20 & 0.190 & 0.437 & 0.247 \\
+  Wilfried Zaha & 2020-21 & 0.450 & 0.279 & 0.171 \\
+  Wilfried Zaha & 2021-22 & 0.450 & 0.349 & 0.101 \\
+  Wilfried Zaha & 2022-23 & 0.350 & 0.433 & 0.083 \\
+  \hline
+  \end{tabular}
+  \caption{Prediction Results for Wilfried Zaha}
+  \label{tab:zaha_prediction_results}
+  \end{table}
+    
 
 
 \section{Discussion}
