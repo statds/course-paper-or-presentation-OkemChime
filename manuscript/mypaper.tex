@@ -14,6 +14,9 @@
 % highlighting hyper links
 \usepackage[colorlinks=true, citecolor=blue]{hyperref}
 
+\usepackage{float}
+
+
 
 %% meta data
 
@@ -549,19 +552,16 @@ results for each of the 9 players players using this model.
 
   % zaha figure
 
-  \begin{figure}[h]
-    \centering
-    \includegraphics[width=0.8\textwidth]{GradBoost_Zaha.pdf}
-    \caption{Wilfried Zaha Predictions vs Actual (Gradient Boost)}
-    \label{fig:zaha_graph}
-    \end{figure}
-    
-
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=1\textwidth]{GradBoost_Zaha.pdf}
+  \caption{Wilfried Zaha Predictions vs Actual (Gradient Boost)}
+  \label{fig:zaha_graph}
+  \end{figure}
 
 
 %zaha acc vs pred
-
-\begin{table}[h]
+\begin{table}[H]
   \centering
   \begin{tabular}{|l|c|c|c|c|}
   \hline
@@ -578,7 +578,13 @@ results for each of the 9 players players using this model.
   \caption{Prediction Results for Wilfried Zaha}
   \label{tab:zaha_prediction_results}
   \end{table}
+  
+
     
+
+
+
+
 
 
 \section{Discussion}
