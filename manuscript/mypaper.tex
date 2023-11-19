@@ -507,9 +507,9 @@ allowed us to train the model on a dynamic dataset as we moved through the seaso
 
 We then applied different models to our research to assess which one performed 
 the best in comparison to the actual 'G+A/90' values for each player. We chose 
-5 different modelling techniques:
-Linear Regression, Decision Tree, Random Forest, Gradient Boosting and 
-Ridge Regression.
+6 different modelling techniques:
+Linear Regression, Decision Tree, Random Forest, Gradient Boosting, Kernel Ridge 
+and Ridge Regression.
 We evaulated the results by calculating the 
 Mean Squared Error (MSE), Mean Absolute Error (MAE) and Correlation (Corr) for 
 each player's set of predictions as well as calculating the average MSE, MAE and 
@@ -540,7 +540,7 @@ results for each of the 9 players players using this model.
   Ridge Regression & 0.080 & 0.214 & -0.316 \\
   \hline
   \end{tabular}
-  \caption{Model Performance Metrics}
+  \caption{Model Performance Comparison}
   \label{tab:model_performance}
   \end{table}
 
