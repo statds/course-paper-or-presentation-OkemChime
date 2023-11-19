@@ -340,10 +340,6 @@ historical data as opposed to predicting the outcome of a singular match.
 
 
 
-
-
-
-
 % objectives/ specific aims - tweak
 The objective of this paper will be to investigate how data visualization and
 predictive analysis can be used to assess and improve player performance in
@@ -354,7 +350,7 @@ metrics influence the prediction of player's goal contributions
 soccer matches, and how can this information be leveraged for strategic 
 decision-making?".
 
-By analysisng the performance statistics of premier league 
+By analyzing the performance statistics of premier league 
 players from previous years, this paper will able to decipher the important
 factors that are significant in contributing to a player's total goal
 contributions per 90 minutes in a premier league season. From this, we will use 
@@ -443,6 +439,84 @@ not a commonly adopted performance statistic in earlier Premier League seasons.
 
 % Utilize this section to introduce the methodologies that will produce results 
 % through the analysis of the provided data.
+
+% data collection
+This research commenced through collecting the performance data. Using 
+Fbref.com as our data source we were able to download 10 seasons of player
+performance data into microsoft excel where we could better manipulate and 
+analysze the data. 
+% data cleaning
+The data then had to be cleaned make it usable via deleting uneeded cells which
+didn't provide statistical data as well as other pieces of miscellaneous text 
+which had been imported during the downloading process. 
+% importing to python + operations on the data
+From here we imported these excel sheets into python- which will be the 
+statistical software of choice for the research project. Using pandas enabled
+us to create 10 seperate python files for each season of Premier League data and 
+store them as a dataframe. One issue that was indentified in the data was that 
+if a player had switched teams during the middle of the season their name would 
+appear twice in the dataset. To remedy this, we created a python script which 
+itreated through each dataframe and checked if a player's name appeared more 
+than once in a dataset- if the player's name appeared only once then their attributes
+would get immediately added to the dataframe however, if their name appeared twice
+then we would have to aggregate their data into a single entry- for example,
+summing together attributes such as goals, assists and minutes played and then 
+adding them to the dataframe.
+
+Next, we had to amalgamate all this data together. The idea was to create a 
+large dataframe composed of the 10 dataframes containing performance data for players 
+in each Premier League season. This required importing all of these dataframes 
+into a central python file. We then extracted all the unique player names from
+all the seasons by adding each player name to a set then converting it to a list.
+This resulted in a total of 1895 unique players who had featured in the Premier
+League across all 10 seasons.
+
+Now that we had identified every unique player, our aim was to create 10 new 
+dataframes containing all 1895 players for each season. By importing the unique
+player names list into a python script coresponding to each season, we imported 
+the dataframe corresponding to that specific season and for each name in the 
+unique player names list we checked if the current player featured in that specific 
+season by checking if they appeared in the dataframe. If they did feature in that 
+speciifc season they would get added to the dataframe immediately whereas if a 
+player didn't feature they would get added to the dataframe with 'NaN' values 
+as their attributes. 
+
+We were then able to create a 3 dimensional tensor- consisting of the dimensions 
+player name, season and player attributes for each season- from these 10 dataframes
+by concatinating them all into this central tensor. 
+We then iterated through the tensor to find the players who had featured in all 
+10 seasons and added them to a list. From this list we were able to identify 
+9 forward/midfield players upon which to base our research upon. These players 
+include:
+Harry Kane, Raheem Sterling, Wilfried Zaha,
+James Ward-Prowse, Jordan Henderson, Danny Welbeck,
+Adam Lallana, Alex Oxlade-Chamberlain and Theo Walcott.
+
+At this point we were then able to conduct the predictive portion of our research.
+The idea was to implement a 'rolling-window' approach to training our model. 
+We would train the model by inputting the players 'G+A/90' (Goals + Assists per 
+90 minutes) for the previous 3 seasons as well as their position position, age 
+and minutes played for the current season that we would be trying to predict.
+This would then be compared to the player's actual 'G+A/90' value for the season
+and then the model would continue on in this fashion- sliding the window 
+forward one season at a time unitl it provided a prediction 
+for the final season.
+This meant that for each player the model would provide 6 predictions, starting
+from the 4th season (2016-17) up until the final season (2022-23). This approach 
+allowed us to train the model on a dynamic dataset as we moved through the seasons.
+
+We then applied different models to our research to assess which one performed 
+the best in comparison to the actual 'G+A/90' values for each player. We chose 
+5 different modelling techniques:
+Linear Regression, Decision Tree, Random Forest, Gradient Boosting and 
+Ridge Regression.
+We evaulated the results by calculating the 
+Mean Squared Error (MSE), Mean Absolute Error (MAE) and Correlation (Corr) for 
+each player's set of predictions as well as calculating the average MSE, MAE and 
+Corr across all 9 players for each model in order to compare each model's 
+overall performance against one another.
+After selecting the best performing model, we then displayed the prediction
+results for each of the 9 players players using this model.
 
 
 
