@@ -531,7 +531,7 @@ results for each of the 9 players players using this model.
 % table comparing model performance
 
 
-\begin{table}[h]
+\begin{table}[H]
   \centering
   \begin{tabular}{|l|c|c|c|}
   \hline
@@ -556,7 +556,7 @@ results for each of the 9 players players using this model.
   \centering
   \includegraphics[width=1\textwidth]{GradBoost_Zaha.pdf}
   \caption{Wilfried Zaha Predictions vs Actual (Gradient Boost)}
-  \label{fig:zaha_graph}
+  \label{fig:Zaha_graph}
   \end{figure}
 
 
@@ -565,14 +565,14 @@ results for each of the 9 players players using this model.
   \centering
   \begin{tabular}{|l|c|c|c|c|}
   \hline
-  \textbf{Player Name} & \textbf{Season} & \textbf{Actual G+A/90} & \textbf{Predicted G+A/90} & \textbf{Discrepancy} \\
+  \textbf{Season} & \textbf{Actual G+A/90} & \textbf{Predicted G+A/90} & \textbf{Discrepancy} \\
   \hline
-  Wilfried Zaha & 2017-18 & 0.420 & 0.450 & 0.030 \\
-  Wilfried Zaha & 2018-19 & 0.440 & 0.435 & 0.005 \\
-  Wilfried Zaha & 2019-20 & 0.190 & 0.437 & 0.247 \\
-  Wilfried Zaha & 2020-21 & 0.450 & 0.279 & 0.171 \\
-  Wilfried Zaha & 2021-22 & 0.450 & 0.349 & 0.101 \\
-  Wilfried Zaha & 2022-23 & 0.350 & 0.433 & 0.083 \\
+  2017-18 & 0.420 & 0.450 & 0.030 \\
+  2018-19 & 0.440 & 0.435 & 0.005 \\
+  2019-20 & 0.190 & 0.437 & 0.247 \\
+  2020-21 & 0.450 & 0.279 & 0.171 \\
+  2021-22 & 0.450 & 0.349 & 0.101 \\
+  2022-23 & 0.350 & 0.433 & 0.083 \\
   \hline
   \end{tabular}
   \caption{Prediction Results for Wilfried Zaha}
@@ -580,7 +580,120 @@ results for each of the 9 players players using this model.
   \end{table}
   
 
-    
+% Henderson fig
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=1\textwidth]{GradBoost_Henderson.pdf}
+  \caption{Jordan Henderson Predictions vs Actual (Gradient Boost)}
+  \label{fig:Henderson_graph}
+  \end{figure}
+
+% Henderson Table
+
+\begin{table}[H]
+  \centering
+  \begin{tabular}{|l|c|c|c|c|}
+  \hline
+  \textbf{Season} & \textbf{Actual G+A/90} & \textbf{Predicted G+A/90} & \textbf{Discrepancy} \\
+  \hline
+  2017-18 & 0.080 & 0.210 & 0.130 \\
+  2018-19 & 0.180 & 0.127 & 0.053 \\
+  2019-20 & 0.360 & 0.118 & 0.242 \\
+  2020-21 & 0.110 & 0.278 & 0.168 \\
+  2021-22 & 0.110 & 0.159 & 0.049 \\
+  2022-23 & 0.090 & 0.255 & 0.165 \\
+  \hline
+  \end{tabular}
+  \caption{Prediction Results for Jordan Henderson}
+  \label{tab:henderson_prediction_results}
+\end{table}
+
+% kane figure
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=1\textwidth]{GradBoost_Kane.pdf}
+  \caption{Harry Kane Predictions vs Actual (Gradient Boost)}
+  \label{fig:Kane_graph}
+  \end{figure}
+
+% Kane Table
+
+  \begin{table}[h]
+    \centering
+    \begin{tabular}{|c|c|c|c|}
+    \hline
+    \textbf{Season} & \textbf{Actual G+A/90} & \textbf{Predicted G+A/90} & \textbf{Discrepancy} \\
+    \hline
+    2017-18 & 0.940 & 1.210 & 0.270 \\
+    2018-19 & 0.780 & 1.095 & 0.315 \\
+    2019-20 & 0.700 & 0.932 & 0.232 \\
+    2020-21 & 1.080 & 0.930 & 0.150 \\
+    2021-22 & 1.080 & 0.900 & 0.180 \\
+    2022-23 & 0.870 & 0.764 & 0.106 \\
+    \hline
+    \end{tabular}
+    \caption{Prediction Results for Harry Kane}
+    \label{tab:kane_prediction_results}
+  \end{table}
+  
+% Lallana figure
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=1\textwidth]{GradBoost_Lallana.pdf}
+  \caption{Adam Lallana Predictions vs Actual (Gradient Boost)}
+  \label{fig:Lallana_graph}
+  \end{figure}
+
+% Lallana table
+
+\begin{table}[h]
+  \centering
+  \begin{tabular}{|c|c|c|c|}
+  \hline
+  \textbf{Season} & \textbf{Actual G+A/90} & \textbf{Predicted G+A/90} & \textbf{Discrepancy} \\
+  \hline
+  2017-18 & 0.000 & 0.540 & 0.540 \\
+  2018-19 & 0.000 & 0.096 & 0.096 \\
+  2019-20 & 0.470 & 0.129 & 0.341 \\
+  2020-21 & 0.110 & 0.388 & 0.278 \\
+  2021-22 & 0.110 & 0.091 & 0.019 \\
+  2022-23 & 0.370 & 0.487 & 0.117 \\
+  \hline
+  \end{tabular}
+  \caption{Prediction Results for Adam Lallana}
+  \label{tab:lallana_prediction_results}
+\end{table}
+
+% Chamberlain figure
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=1\textwidth]{GradBoost_Chamberlain.pdf}
+  \caption{Alex Oxlade-Chamberlain Predictions vs Actual (Gradient Boost)}
+  \label{fig:Chamberlain_graph}
+  \end{figure}
+
+% chamberlain table
+
+\begin{table}[h]
+  \centering
+  \begin{tabular}{|c|c|c|c|}
+  \hline
+  \textbf{Season} & \textbf{Actual G+A/90} & \textbf{Predicted G+A/90} & \textbf{Discrepancy} \\
+  \hline
+  2017-18 & 0.518 & 0.500 & 0.018 \\
+  2018-19 & 0.000 & 0.511 & 0.511 \\
+  2019-20 & 0.300 & 0.221 & 0.079 \\
+  2020-21 & 0.710 & 0.243 & 0.467 \\
+  2021-22 & 0.710 & 0.630 & 0.080 \\
+  2022-23 & 0.270 & 0.194 & 0.076 \\
+  \hline
+  \end{tabular}
+  \caption{Prediction Results for Alex Oxlade-Chamberlain}
+  \label{tab:oxlade_chamberlain_prediction_results}
+\end{table}
 
 
 
