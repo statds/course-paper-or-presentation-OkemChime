@@ -619,7 +619,7 @@ results for each of the 9 players players using this model.
 
 % Kane Table
 
-  \begin{table}[h]
+  \begin{table}[H]
     \centering
     \begin{tabular}{|c|c|c|c|}
     \hline
@@ -648,7 +648,7 @@ results for each of the 9 players players using this model.
 
 % Lallana table
 
-\begin{table}[h]
+\begin{table}[H]
   \centering
   \begin{tabular}{|c|c|c|c|}
   \hline
@@ -677,7 +677,7 @@ results for each of the 9 players players using this model.
 
 % chamberlain table
 
-\begin{table}[h]
+\begin{table}[H]
   \centering
   \begin{tabular}{|c|c|c|c|}
   \hline
@@ -693,6 +693,146 @@ results for each of the 9 players players using this model.
   \end{tabular}
   \caption{Prediction Results for Alex Oxlade-Chamberlain}
   \label{tab:oxlade_chamberlain_prediction_results}
+\end{table}
+
+% Sterling figure
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=1\textwidth]{GradBoost_Sterling.pdf}
+  \caption{Raheem Sterling Predictions vs Actual (Gradient Boost)}
+  \label{fig:Sterling_graph}
+  \end{figure}
+
+% Sterling Table
+
+  \begin{table}[H]
+    \centering
+    \begin{tabular}{|c|c|c|c|}
+    \hline
+    \textbf{Season} & \textbf{Actual G+A/90} & \textbf{Predicted G+A/90} & \textbf{Discrepancy} \\
+    \hline
+    2017-18 & 1.010 & 0.540 & 0.470 \\
+    2018-19 & 0.840 & 0.946 & 0.106 \\
+    2019-20 & 0.710 & 0.872 & 0.138 \\
+    2020-21 & 0.600 & 0.637 & 0.037 \\
+    2021-22 & 0.600 & 0.600 & 0.000 \\
+    2022-23 & 0.430 & 0.592 & 0.162 \\
+    \hline
+    \end{tabular}
+    \caption{Prediction Results for Raheem Sterling}
+    \label{tab:sterling_prediction_results}
+  \end{table}
+
+  % Welbeck Graph
+  \begin{figure}[H]
+    \centering
+    \includegraphics[width=1\textwidth]{GradBoost_Welbeck.pdf}
+    \caption{Danny Welbeck Predictions vs Actual (Gradient Boost)}
+    \label{fig:Welbeck_graph}
+    \end{figure}
+
+  % Welbeck table
+
+
+    \begin{table}[H]
+      \centering
+      \begin{tabular}{|c|c|c|c|}
+      \hline
+      \textbf{Season} & \textbf{Actual G+A/90} & \textbf{Predicted G+A/90} & \textbf{Discrepancy} \\
+      \hline
+      2017-18 & 0.530 & 0.480 & 0.050 \\
+      2018-19 & 1.180 & 0.505 & 0.675 \\
+      2019-20 & 0.220 & 0.814 & 0.594 \\
+      2020-21 & 0.410 & 0.398 & 0.012 \\
+      2021-22 & 0.410 & 0.625 & 0.215 \\
+      2022-23 & 0.440 & 0.444 & 0.004 \\
+      \hline
+      \end{tabular}
+      \caption{Prediction Results for Danny Welbeck}
+      \label{tab:welbeck_prediction_results}
+    \end{table}
+    
+  
+% Ward Prowse figure
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=1\textwidth]{GradBoost_Prowse.pdf}
+  \caption{James Ward-Prowse Predictions vs Actual (Gradient Boost)}
+  \label{fig:Prowse_graph}
+  \end{figure}
+
+% ward prowse table
+
+\begin{table}[h]
+  \centering
+  \begin{tabular}{|c|c|c|c|}
+  \hline
+  \textbf{Season} & \textbf{Actual G+A/90} & \textbf{Predicted G+A/90} & \textbf{Discrepancy} \\
+  \hline
+  2017-18 & 0.310 & 0.380 & 0.070 \\
+  2018-19 & 0.320 & 0.334 & 0.014 \\
+  2019-20 & 0.210 & 0.317 & 0.107 \\
+  2020-21 & 0.390 & 0.210 & 0.180 \\
+  2021-22 & 0.390 & 0.210 & 0.180 \\
+  2022-23 & 0.350 & 0.385 & 0.035 \\
+  \hline
+  \end{tabular}
+  \caption{Prediction Results for James Ward-Prowse}
+  \label{tab:wardprowse_prediction_results}
+\end{table}
+
+% walcott figure
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=1\textwidth]{GradBoost_Walcott.pdf}
+  \caption{Theo Walcott Predictions vs Actual (Gradient Boost)}
+  \label{fig:Walcott_graph}
+  \end{figure}
+
+
+% walcott table
+
+\begin{table}[h]
+  \centering
+  \begin{tabular}{|c|c|c|c|}
+  \hline
+  \textbf{Season} & \textbf{Actual G+A/90} & \textbf{Predicted G+A/90} & \textbf{Discrepancy} \\
+  \hline
+  2017-18 & 0.441 & 0.560 & 0.119 \\
+  2018-19 & 0.300 & 0.493 & 0.193 \\
+  2019-20 & 0.350 & 0.362 & 0.012 \\
+  2020-21 & 0.331 & 0.338 & 0.007 \\
+  2021-22 & 0.331 & 0.331 & 0.000 \\
+  2022-23 & 0.320 & 0.336 & 0.016 \\
+  \hline
+  \end{tabular}
+  \caption{Prediction Results for Theo Walcott}
+  \label{tab:walcott_prediction_results}
+\end{table}
+
+
+% overall performance of grad boost
+
+\begin{table}[H]
+  \centering
+  \begin{tabular}{|l|c|c|c|}
+  \hline
+  \textbf{Player Name} & \textbf{MSE} & \textbf{MAE} & \textbf{Correlation} \\
+  \hline
+  Wilfried Zaha & 0.018 & 0.106 & -0.457 \\
+  Jordan Henderson & 0.023 & 0.134 & -0.689 \\
+  Harry Kane & 0.049 & 0.209 & -0.093 \\
+  Adam Lallana & 0.085 & 0.232 & -0.060 \\
+  Alex Oxlade-Chamberlain & 0.083 & 0.205 & 0.141 \\
+  Raheem Sterling & 0.048 & 0.156 & 0.186 \\
+  Danny Welbeck & 0.143 & 0.258 & -0.362 \\
+  James Ward-Prowse & 0.014 & 0.098 & -0.495 \\
+  Theo Walcott & 0.009 & 0.058 & 0.589 \\
+  \hline
+  \end{tabular}
+  \caption{Gradient Boost Evaluation Metrics for Each Player}
+  \label{tab:player_evaluation_metrics}
 \end{table}
 
 
