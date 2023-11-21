@@ -15,6 +15,7 @@
 \usepackage[colorlinks=true, citecolor=blue]{hyperref}
 
 \usepackage{float}
+\usepackage{setspace}
 
 
 
@@ -26,6 +27,7 @@ Data Visualization and Predictive Analysis}
   University of Connecticut
 }
 
+\doublespacing
 \begin{document}
 \maketitle
 
@@ -349,7 +351,7 @@ predictive analysis can be used to assess and improve player performance in
 Premier League soccer. It then seeks to answer the quesion:
 "How does historical player performance data, including key performance
 metrics influence the prediction of player's goal contributions
-(combinecd goals and assists) per 90 minutes in future Premier League 
+(combined goals and assists) per 90 minutes in future Premier League 
 soccer matches, and how can this information be leveraged for strategic 
 decision-making?".
 
@@ -843,13 +845,204 @@ results for each of the 9 players players using this model.
 \section{Discussion}
 \label{sec:disc}
 
-
-
 % What are the main contributions again?
 
 % What are the limitations of this study?
 
 % What are worth pursuing further in the future?
+
+The evalutation 
+metrics we used to compare the performance of our models were Mean Squared Error
+(MSE), Mean Absolute Error (MAE) and Correlation (Corr). These values for each 
+model were calculated by taking the averages of these values for each player
+thus providing an insight of how the model performed in its predictions of all 
+9 players in this investigation. MSE and MAE give a sense of the magnitude
+of errors with lower values indicating better performance, while correlation
+provides insight into the linear relationship between predicted and actual values
+with values closer to 1 or -1 indicating a stronger linear relationship.
+For our study, higher signifcance in evaluating model performance is placed on
+the MSE and MAE values as they give a clearer indication on prediction accuracy 
+against actual player performance. Correlation will hold less weight in 
+our best model selection due to the fact that we do not necessarily expect player 
+performance to be especially linear. The main focus is getting as near to the 
+correct values as possible.
+
+As we can see from Table \ref{tab:model_performance} which compared all 6
+potential models for carrying out our investigation, the prediction model with
+the lowest average MSE (MSE = 0.041) and MAE (MAE = 0.150) was Gradient Boosting,
+thus becoming the model used to carry out our player predictions.
+
+From Table \ref{tab:player_evaluation_metrics} we can see the MSE, MAE and Corr 
+for each player in which the Gradient Boosting prediciton model was applied.
+We see that the player which our model was able to most accurately predict was 
+Theo Walcott as this set of results had the lowest MSE (MSE = 0.009) and MAE
+(MAE = 0.058) values. The player that the model did the worst with prediciting
+was Danny Welbeck as this set of results had the highest MSE (MSE =0.143) and 
+and the highest MAE (MAE = 0.258).
+
+From this we can see that our model expressed good proficiency is predicting 
+the goal contributions of each player based on historical data as shown by the 
+relatively low average MSE and MAE values, showing that on average the  model's
+predictions are close to the actual values in terms of magnitude. This  is
+indicative of the model's ability to capture the general trends and patterns
+present in the data. 
+In relation to our central research question- "How does historical player
+performance data, including key performance metrics, influence the prediction of
+player's goal contributions per 90 minutes in future Premier League soccer matches,
+and how can this information be leveraged for strategic decision-making?" - upon
+the results of research, we can state that previous historical performance data 
+such as goal contributions per 90 minutes as well as variables such as age, 
+position and minutes played provides enough substantial input to make proficiently 
+accurate predictions on player's future goal contributions per 90 minutes and 
+consequently can be used to guide decision making regarding specific player 
+performance statisitcs.
+The results of this study falls in line with other literature in the field of 
+predicitve modelling within sport such as the previously mentioned work of 
+\citet{geurkink2021machine} who also used Gradient Boosting in their research,
+resulting in a model accuracy of approximately 90\%. This shows that although 
+performance model should not be soley relied upon, they  are able to provide
+proficiently accurate predicitions for the majority of circumstances and thus can
+definitely be used to inform and guide decision making within sporting contexts.
+
+However, there are some limitations to be addressed with this type of research.
+When it comes to player performance, due to the nature of sport there are always
+going to be intangible variables which we are not able to account for in any type 
+of quantitative research which can affect indivdual performance. An example of
+one of these intagible variables would be confidence. The level of confidence 
+in a player's own abilities can not only vary from season to season but from game to 
+game and can fluctuate due to numerous factors. Variables such as confidence are 
+extremely subjective and can be influenced by recent successes or failures,
+team dynamics, and external pressures. Another such variable would be
+motivation. An indivdual's drive to succeed, personal goals, and external
+motivators can influence a player's effort and commitment, impacting their
+overall performance. One again motivation can change from game to game and season 
+by season. Other relevant intagible factors that further explain the limitations 
+of our research include: focus and concentration, team chemistry, work ethic and 
+team culture. These variables can all change on a season by season basis and due 
+the fact they cannot be measured can help explain why our model at times made 
+less accurate predictions on player performance.
+The exisetence of intagible variables highlights the complexity and multifaceted
+nature of player performance. These factors may interact in intricate ways,
+which adds a layer of challenge to predicting performance based solely on historical
+data and statistical models.
+
+Another limitation with our research includes the influence of off-field variables.
+Our research focused soley on on-field performance metrics that can be observed
+in game. However, outside factors can have a significant
+impact on performance and are typically harder to measure and evaluate.
+An example of one of these off-field variables is injuries. 
+Player injuries, both current and historical, can heavily influence performance.
+The type, severity, and recovery time of injuries may have long-term effects on
+a player's capabilities. Another vital off-field variable related to player
+performance is recovery and rehabilitation. The effectiveness of a player's
+recovery and rehabilitation processes can impact their return to optimal
+performance levels. Factors such as access to quality medical care and adherence
+to rehabilitation programs are crucial. Recovery and rehabilitation also
+encapsulates aspects such as:
+
+\begin{itemize}
+  \item Nutrition and Diet: The quality of a player's nutrition and dietary habits can
+  affect physical fitness, energy levels, and overall health, influencing
+  performance on the field.
+  \item Rest and Sleep: Adequate rest and quality sleep are essential for recovery and
+  maintaining peak physical and mental performance. Sleep deprivation or irregular
+  sleep patterns can negatively impact a player's abilities.
+  \item Lifestyle Choices: Off-field lifestyle choices, including habits related to
+  alcohol consumption, smoking, and recreational activities, can influence a
+  player's overall well-being and, consequently, their performance.
+\end{itemize}
+
+Other relevant off-field variables include external stressors, media and public
+pressure and contractual and transfer issues. Considering these off-field
+variables is essential for a comprehensive understanding of player performance
+and recognizing them helps us further understand the reasoning for our model
+making less accurate predictions at times.
+
+\subsection{Future Recommendations}
+
+While this paper has provided valuable insights into the predictive modeling of
+player performance in Premier League soccer matches using historical data, there
+are several avenues for future research that can enhance the
+comprehensiveness and applicability of such predictive models.
+
+Firstly, future research could explore the inclusion of additional features to
+improve the model's accuracy. Beyond the current set of performance metrics,
+considering contextual factors such as match importance, team dynamics, and
+opponent strength may provide a more nuanced understanding of player contributions.
+Additionally, exploring advanced player tracking data, when available, could
+offer richer insights into player movements and positioning during matches.
+
+Feature expansion could extend beyond the quantitative metrics to include
+intangible variables that significantly influence player performance. Variables
+such as confidence, motivation, and psychological factors play a crucial role in
+an athlete's on-field performance. Incorporating these intangible aspects into
+the predictive model may unravel new dimensions of understanding, capturing the
+intricacies of a player's mental state and its impact on their contributions.
+Intangible aspects are challenging to quantify and measure directly. However,
+while they may not be as easily captured as numerical statistics, there are
+indirect methods and proxies that researchers can employ to incorporate some
+aspects of these intangibles into predictive models.
+Some suggestions include:
+
+\begin{itemize}
+  \item Survey Data: Conducting surveys or interviews with players, coaches, or
+  other stakeholders can provide subjective insights into intangible factors.
+  Questions related to confidence, motivation, and mental state can contribute
+  qualitative data.
+  \item Sentiment Analysis: Analyzing media reports, interviews, or social media
+  content related to players can provide sentiment indicators. Positive or
+  negative sentiments expressed in these sources may offer clues about a player's
+  mental state.
+  \item Performance in High-Pressure Situations: Assessing a player's historical
+  performance in high-pressure or critical matches can indirectly reflect their
+  mental resilience and composure during crucial moments.
+  \item Leadership Roles: Examining a player's history of leadership roles within
+   the team, such as being a captain, may provide insights into their influence
+   on team dynamics beyond statistical contributions.
+   \item Team Dynamics: Exploring team dynamics and interpersonal relationships
+   can indirectly shed light on intangible factors. For instance, analyzing team
+   cohesion, communication patterns, or changes in squad dynamics over time can
+   offer context.
+\end{itemize}
+
+Furthermore, the study could benefit from a deeper investigation into off-field
+variables. Injuries, for instance, are known to substantially affect a player's
+performance, yet the current model does not explicitly account for such occurrences.
+Future research could delve into injury data and incorporate it into the model
+to better predict performance fluctuations resulting from players returning from
+injuries or being sidelined.
+
+To enhance the generalizability of the model, expanding the dataset to include
+players from various leagues and regions could provide a more comprehensive
+understanding of the factors influencing player performance. This cross-league
+analysis could uncover patterns and trends that extend beyond the unique dynamics
+of the Premier League.
+
+Additionally, the temporal scope of the dataset could be expanded to capture
+longer-term trends and player development trajectories. Examining player
+performance over extended periods may reveal patterns related to age, experience,
+or evolving playing styles, contributing to a more holistic understanding of the
+factors influencing a player's G+A/90.
+
+\subsection{Conclusion}
+
+In conclusion, while the current study lays the groundwork for predictive
+modeling of player performance, the incorporation of additional features,
+intangible variables, and off-field considerations, as well as expanding the
+dataset, opens up exciting avenues for future research. These recommendations
+aim to refine and broaden the applicability of predictive models, ultimately
+contributing to more informed decision-making in the dynamic world of soccer
+analytics.
+
+
+
+
+
+
+
+
+
+
 
 
 
