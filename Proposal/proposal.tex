@@ -1,0 +1,160 @@
+\documentclass[12pt]{article}
+
+%% preamble: Keep it clean; only include those you need
+\usepackage{amsmath}
+\usepackage[margin = 1in]{geometry}
+\usepackage{graphicx}
+\usepackage{booktabs}
+\usepackage{natbib}
+\usepackage[T1]{fontenc}
+
+% highlighting hyper links
+\usepackage[colorlinks=true, citecolor=blue]{hyperref}
+
+\title{Proposal: Analyzing Player Performance in Premier League Soccer Using 
+Data Visualization and Predictive Analysis }
+\author{Okem Chime\\
+  University of Connecticut
+}
+
+\begin{document}
+\maketitle
+
+\paragraph{Introduction}
+Performance data is a large and constantly growing field of data science. With
+so many aspects of professional sport that can be analyzed, sport is an 
+extremely relevant domain where data science techniques can be applied in order
+to give players and teams a potential edge. Soccer is the most popular sport in
+the world with more than 3.5 billion fans around the globe and over 250 million
+players in over 200 countries. Amongst this, the English Premier League is the 
+most watched sports league in the world with a potential viewership of over 4.7 
+billion people. With so much attention focused specfically on this league,
+players, coachhes, fans sponsors and more are dependent on the success of the
+league as a whole as well as how specific teams and players are performing. 
+This is where data science comes in as a tool to amalgmate information,
+provide statistical insights and guide decisions that can make all the difference 
+at all levels of the game; all the way from the players on the pitch to the fans
+in the stadium.
+
+There has been recent work done by \citet{goes2021unlocking} which takes into 
+account the importance of big data data in the professional soccer setting. 
+With the increase in technology available to professional soccer players we have
+seen the use of wearable position tracking devices which have been widely 
+adopted by professional sports organizations with the understanding that they
+could be a game changer in the world of high peformance sport. The focus of this 
+work focuses more on the tactical implications of this type of data whereas
+our research will be more focused on how performance data can be used to guide
+decisions about players.
+
+Some interesting work was also done that used performance data as a metric to 
+determine player value. This study looked at s variety of factors in order to 
+determine player value. Some of these metrics included on-field statistics and
+other fairly obvious factors such as discipliniary record and injuries as well
+less obvious variables such as image rights and personal background etc 
+\citep{tunaru2010valuations}. This study like ours, uses OPTA data to look
+evaluate performance at a player level in order to help formulate decisions on
+players. However, this study incorporates off-field metrics as well as  objective
+peformance data to inform their financial evulations on players whereas our
+study will be only based on objective on field performance data and will attempt
+to provide more insights into their current level of performance as well as
+their predicted future level of performance.
+
+
+
+\paragraph{Specific Aims}
+
+The research question that we will be attempting to answer through this paper is
+"How can data visualization and predictive analysis be used to assess and 
+improve player performance in the Premier League soccer?"
+
+More specficially. statistical/data science question we will be aiming to answer
+is: "How does historical player performance data, including key performance
+metrics influence the prediction of player performance in future Premier League 
+soccer matches, and how can this information be leveraged for strategic 
+decision-making?"
+
+This question focuses on the predictive aspect of my research and combines
+elements of data analysis, statistical modeling, and predictive analytics. 
+It also underscores the practical application of my analysis in strategic 
+decision-making within the Premier League context.
+
+
+
+
+\paragraph{Data}
+The primary source of data for this research is Premier league OPTA performance 
+data obtained from \hyper{Fbref.com}, which is a reputable and comprehensive website 
+that provides detailed player and team statistics for various soccer leagues, 
+including the Premier League.
+
+These metrics cover a player's on-field performance and include metrics such as
+matches played, goals scored, assists etc. It also contains other more complex 
+metrics such as expected goals and assits which provides intersting insights
+into player performance.
+
+I will be using 10 seasons of data, ranging from the 2013-14 Premier League
+season up to the 2022-23 premier league season 
+
+
+
+
+\paragraph{Research Design and Methods}
+
+Some of the research methods I will use include:
+
+Data Collection:
+This step will includde gathering historical player performance data from our 
+data source for Premier League matches. I will collect data for 10 seasons to 
+ensure a representative sample.
+
+Data Preprocessing:
+This will be used to clean and preprocess the dataset to handle missing values,
+outliers, and ensure data quality.
+
+Feature Selection:
+This will be used to identify the most relevant features that may influence 
+future player performance.
+
+Predictive Modeling:
+This technique will be used to choose appropriate predictive modeling techniques
+using historical performance data to predict future performance. 
+
+An example of study which used predictive analysis in football was done by 
+\citet{geurkink2021machine} who used a machine 
+learning model to obtain the most important factors in winning and losing using
+data from the Belgian Profesisonal Soccer league and use this to predict whether
+a specific match would be won or lost.
+
+\paragraph{Discussion}
+What are the most challenge parts of the task?
+What are the limitations of your work? What is your fall-back plan if
+something unexpected happens?
+
+Some of the challenges associated with this study will be ensuring Data Quality.
+Ensuring the quality and accuracy of the data from can be challenging. 
+Inaccurate or incomplete data can lead to biased results. My strategy to combat
+this will be to perform thorough data preprocessing, including data cleaning and
+outlier detection, to address data quality issues.
+
+One of the limitations of my work could potentially be external factors.
+Soccer matches can be influenced by various external factors such as injuries,
+team dynamics, and coaching changes that are not accounted for in the dataset.
+I may be limited in my ability to reflect these aspects in the preditive 
+modelling portion of my work.
+
+My fall-back plan if something unexpected happens would be to ensure that model
+evaluation is robust, and consider alternative modeling approaches if the 
+initial models do not perform as expected. I can also seek advice and 
+consultation from professors with experience in data science, sports analytics,
+or related fields who can provide insights and guidance if I encounter any
+significant issues.
+
+
+\bibliography{refs1}
+\bibliographystyle{chicago}
+
+\end{document}
+
+
+
+\end{document}
